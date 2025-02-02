@@ -29,6 +29,7 @@ public:
     int calculateInvoice()
     {
         int price = ((marker.price) * this->quantity);
+        return price;
     }
 };
 
