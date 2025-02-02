@@ -1,7 +1,7 @@
 // Client code
 public class OCP{
     public static void main(String[] args) {
-        Invoice invoice = new Invoice(1000);
+        InvoiceOCP invoice = new InvoiceOCP(1000);
 
         Discount discount = new SeasonalDiscount(); // Can switch to any discount strategy
         int finalAmount = discount.applyDiscount(invoice.getTotalAmount());
@@ -11,10 +11,10 @@ public class OCP{
 }
 
 // Invoice class (closed for modification)
-class Invoice {
+class InvoiceOCP {
     private int totalAmount;
 
-    public Invoice(int totalAmount) {
+    public InvoiceOCP(int totalAmount) {
         this.totalAmount = totalAmount;
     }
 

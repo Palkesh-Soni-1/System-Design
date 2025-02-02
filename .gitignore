@@ -1,2 +1,6 @@
 **/*.class
 **/*.exe
+**/*/out
+**/*.iml
+*.vscode
+**/*.idea
