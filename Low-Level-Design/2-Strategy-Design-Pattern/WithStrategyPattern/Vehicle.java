@@ -1,6 +1,6 @@
 import Strategy.DriveStrategy;
 public class Vehicle {
-    private DriveStrategy driveStrategy;
+    final private DriveStrategy driveStrategy;
     public Vehicle(DriveStrategy driveStrategy){
         this.driveStrategy=driveStrategy;
     }
