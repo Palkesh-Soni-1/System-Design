@@ -12,7 +12,7 @@ public class OCP{
 
 // Invoice class (closed for modification)
 class InvoiceOCP {
-    private int totalAmount;
+    final private int totalAmount;
 
     public InvoiceOCP(int totalAmount) {
         this.totalAmount = totalAmount;

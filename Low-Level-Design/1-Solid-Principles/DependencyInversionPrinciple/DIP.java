@@ -16,12 +16,14 @@ interface Mouse{
 
 class WiredKeyboard implements Keyboard
 {
+    @Override
     public void function(){
         System.out.println("WiredKeyboard");
     }
 }
 class WirelessKeyboard implements Keyboard
 {
+    @Override
     public void function(){
         System.out.println("WirelessKeyboard");
     }
@@ -29,12 +31,14 @@ class WirelessKeyboard implements Keyboard
 
 class WiredMouse implements Mouse
 {
+    @Override
     public void function(){
         System.out.println("WiredMouse");
     }
 }
 class WirelessMouse implements Mouse
 {
+    @Override
     public void function(){
         System.out.println("WirelessMouse");
     }
