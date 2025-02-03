@@ -1,6 +1,7 @@
 **/*.class
 **/*.exe
 **/*/out
+**/*/lib
 **/*.iml
 *.vscode
 **/*.idea
