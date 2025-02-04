@@ -3,5 +3,5 @@
 **/*/out
 **/*/lib
 **/*.iml
-*.vscode
+**/*.vscode
 **/*.idea
