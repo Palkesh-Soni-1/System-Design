@@ -1,6 +1,7 @@
 //open close Principle
 //open for extension but close for modification
 
+//PS
 public class gradeClass {
     public static void main(String[] args) {
         grade g1 = new grade(495, 5);

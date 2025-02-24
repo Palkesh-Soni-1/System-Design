@@ -1,4 +1,7 @@
 // A class should have only 1 reason to change
+//Single Responsibility Principle (SRP) states that a class should have only one reason to change, meaning that a class should have
+
+//PS
 public class StudentClass {
     public static void main(String[] args) {
         //subjects->3

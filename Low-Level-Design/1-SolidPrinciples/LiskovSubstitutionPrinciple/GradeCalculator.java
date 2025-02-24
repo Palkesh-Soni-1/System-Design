@@ -1,5 +1,6 @@
 // Liskov Substitution Principle (LSP) states that objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program
 
+//PS
 public class GradeCalculator {
     public static void printGrade(Student student, double marks) {
         System.out.println("Student: " + student.getname() +
