@@ -42,7 +42,7 @@ public class HashMap<K,V> {
     public V get(K key){
         int hashCode = key.hashCode()%hashTable.length;
         Entry node=hashTable[hashCode];
-        if(node!=null){
+        while(node!=null){
             if(node.key==key){
                 return (V)node.value;
             }
