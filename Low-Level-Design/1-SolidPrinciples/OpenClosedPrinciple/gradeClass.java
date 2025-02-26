@@ -2,9 +2,9 @@
 //open for extension but close for modification
 
 //PS
-public class gradeClass {
+public class GradeClass {
     public static void main(String[] args) {
-        grade g1 = new grade(495, 5);
+        Grade g1 = new Grade(495, 5);
         g1.getScore();
         g1.getNumSubjects();
         TenGrade t1 = new TenGrade();
@@ -15,10 +15,10 @@ public class gradeClass {
 }
 
 //grade class
-class grade{
+class Grade{
     float score;
     int numSubjects;
-    public grade(float score, int numSubjects)
+    public Grade(float score, int numSubjects)
     {
         this.score=score;
         this.numSubjects = numSubjects;
@@ -35,12 +35,12 @@ class grade{
 
 //interface for grade calculation
 interface InnergradeClass {
-    public float calculateGrade(grade g);
+    public float calculateGrade(Grade g);
 }
 
 //class for calculating grade in ten grade
 class TenGrade implements InnergradeClass{
-    public float calculateGrade(grade g)
+    public float calculateGrade(Grade g)
     {
         float score =  g.getScore();
         int numSubjects= g.getNumSubjects();
@@ -52,7 +52,7 @@ class TenGrade implements InnergradeClass{
 
 //class for calculating grade in percentage
 class Percentage implements InnergradeClass{
-    public float calculateGrade(grade g)
+    public float calculateGrade(Grade g)
     {
         float score =  g.getScore();
         int numSubjects= g.getNumSubjects();
