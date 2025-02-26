@@ -12,35 +12,33 @@ public class Team {
         p3.writePressRelease();
         p3.distributePressRelease();
         
-        person4 p4 = new person4();
-        p4.thinkPoster();
-        p4.makePoster();
-        p4.writePressRelease();
-        p4.distributePressRelease();
     }
 }
 
+interface Employee{
 
-interface Desiner{
-    void thinkPoster();
-    void makePoster();
+}
+
+abstract class Desiner   implements Employee {
+    public abstract void thinkPoster();
+    public abstract void makePoster();
     
 }
 
 
-interface Developer{
-    void writeCode();
-    void testCode();
+abstract class Developer  implements Employee{
+    abstract void writeCode();
+    abstract void testCode();
     
 }
 
-interface PublicRelations{
-    void writePressRelease();
-    void distributePressRelease();
+abstract class PublicRelations  implements Employee{
+    abstract void writePressRelease();
+    abstract void distributePressRelease();
     
 }
 
-class person1 implements Desiner{
+class person1 extends Desiner{
     @Override
     public void thinkPoster(){
         System.out.println("Thinking of a poster...");
@@ -50,7 +48,7 @@ class person1 implements Desiner{
     }
 }
 
-class person2 implements Developer{
+class person2 extends Developer{
     @Override
     public void writeCode(){
         System.out.println("Writing code...");
@@ -60,7 +58,7 @@ class person2 implements Developer{
     }
 }
 
-class person3 implements PublicRelations{
+class person3 extends PublicRelations{
     @Override
     public void writePressRelease(){
         System.out.println("Writing press release...");
@@ -70,22 +68,6 @@ class person3 implements PublicRelations{
     }
 }
 
-class person4 implements Desiner, PublicRelations{
-    @Override
-    public void thinkPoster(){
-        System.out.println("Thinking of a poster...");
-    }
-    public void makePoster(){
-        System.out.println("Making a poster...");
-    }
 
-    @Override
-    public void writePressRelease(){
-        System.out.println("Writing press release...");
-    }
-    public void distributePressRelease(){
-        System.out.println("Distributing press release...");
-    }
-}
 
 
