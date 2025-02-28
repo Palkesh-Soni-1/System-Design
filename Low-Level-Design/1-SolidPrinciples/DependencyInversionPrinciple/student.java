@@ -1,10 +1,10 @@
 //PS
 
-public class student {
+public class Student {
     public static void main(String[] args) {
         Course B1 = new Btech();
         Specialization C1 = new Cse();
-        student1 s = new student1(B1, C1);
+        Student1 s = new Student1(B1, C1);
         s.study();
         s.special();
     }
@@ -60,10 +60,10 @@ class Civil implements Specialization{
     }
 }
 
-class student1{
+class Student1{
     Course c;
     Specialization s;
-    public student1(Course c, Specialization s){
+    public Student1(Course c, Specialization s){
         this.c = c;
         this.s = s;
     }

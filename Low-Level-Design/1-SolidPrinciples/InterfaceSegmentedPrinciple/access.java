@@ -1,38 +1,38 @@
 //interfaces should be such that the classes that implement them should not have to implement methods that they don't need.
 
 //PS
-public class access {
+public class Access {
     public static void main(String[] args) {
-        viewer v1 = new user();
+        Viewer v1 = new user();
         v1.view();
-        viewer v2 = new admin();
+        Viewer v2 = new Admin();
         v2.view();
-        editor e1 = new admin();
+        Editor e1 = new Admin();
         e1.edit();
 
-        admin a1 = new admin();
+        Admin a1 = new Admin();
         a1.view();
         a1.edit();
     }
 }
 
 
-interface viewer {
+interface Viewer {
     void view();
 } 
 
-interface editor {
+interface Editor {
     void edit();
 }
 
-class user implements viewer{
+class user implements Viewer{
     @Override
     public void view() {
         System.out.println("Viewing document...");
     }
 }
 
-class admin implements viewer, editor{
+class Admin implements Viewer, Editor{
     @Override
     public void view() {
         System.out.println("Viewing document...");
