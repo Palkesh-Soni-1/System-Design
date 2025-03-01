@@ -1,15 +1,16 @@
 public class FamilyFood {
 
     public static void main(String[] args) {
-
-        NonVegOrderFamily family1 = new NonVegFamily();
+        Family family1 = new NonVegFamily();
         family1.familyType();
-        family1.orderNonVeg();
         family1.orderVeg();
+        if (family1 instanceof NonVegOrderFamily) {
+            ((NonVegOrderFamily) family1).orderNonVeg();
+        }
 
-        PureVegOrderFamily family2 = new PureVegFamily();
+        Family family2 = new PureVegFamily();
         family2.familyType();
-        family2.orderVeg();
+        family2.orderVeg(); 
     }
 }
 
@@ -19,16 +20,16 @@ abstract class Family {
     abstract void orderVeg(); 
 }
 
-abstract class PureVegOrderFamily extends Family {
+abstract class NonVegOrderFamily extends Family {
+    abstract void orderNonVeg();
+
     @Override
     public void orderVeg() {
         System.out.println("Ordering vegetarian food.");
     }
 }
 
-abstract class NonVegOrderFamily extends Family {
-    abstract void orderNonVeg();
-
+abstract class PureVegOrderFamily extends Family {
     @Override
     public void orderVeg() {
         System.out.println("Ordering vegetarian food.");
