@@ -1,8 +1,8 @@
 package Observable;
-import Observer.Observer1;
+import Observer.DisplayObserver;
 public interface Subject {
-    void addObserver(Observer1 observer);
-    void removeObserver(Observer1 observer);
+    void addObserver(DisplayObserver observer);
+    void removeObserver(DisplayObserver observer);
     void notifyObservers();
 }
 

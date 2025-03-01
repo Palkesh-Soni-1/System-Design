@@ -1,26 +1,26 @@
 package Observable;
 
-import Observer.Observer1;
+import Observer.DisplayObserver;
 import java.util.ArrayList;
 import java.util.List;
 
 public class WeatherStation implements Subject {
-    private List<Observer1> observers = new ArrayList<>();
+    private List<DisplayObserver> observers = new ArrayList<>();
     private String weather;
 
     @Override
-    public void addObserver(Observer1 observer) {
+    public void addObserver(DisplayObserver observer) {
         observers.add(observer);
     }
 
     @Override
-    public void removeObserver(Observer1 observer) {
+    public void removeObserver(DisplayObserver observer) {
         observers.remove(observer);
     }
 
     @Override
     public void notifyObservers() {
-        for (Observer1 observer : observers) {
+        for (DisplayObserver observer : observers) {
             observer.update(weather);
         }
     }

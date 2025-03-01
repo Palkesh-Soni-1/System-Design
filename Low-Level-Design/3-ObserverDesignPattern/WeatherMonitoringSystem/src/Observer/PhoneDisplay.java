@@ -1,6 +1,6 @@
 package Observer;
 // import Observable.Subject;
-public class PhoneDisplay implements Observer1 {
+public class PhoneDisplay implements DisplayObserver {
     private String weather;
     @Override
     public void update(String weather) {

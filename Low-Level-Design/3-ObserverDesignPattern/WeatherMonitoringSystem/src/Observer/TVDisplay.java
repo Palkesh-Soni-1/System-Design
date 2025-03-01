@@ -1,6 +1,6 @@
 package Observer;
 // import Observable.Subject;
-public class TVDisplay implements Observer1 {
+public class TVDisplay implements DisplayObserver {
     private String weather;
  
     @Override

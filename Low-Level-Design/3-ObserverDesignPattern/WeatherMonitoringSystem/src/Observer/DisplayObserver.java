@@ -1,5 +1,5 @@
 package Observer;
-public interface Observer1 {
+public interface DisplayObserver {
     public void update(String weather);
 }
 
