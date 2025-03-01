@@ -1,37 +1,69 @@
+
+
 public class DeliveryDiscount{
 
     public static void main(String[] args){
 
-        Family f1 = new Family1();
-        f1.familyType();
-        Family f2 = new Family2(); 
-        f2.familyType();
+        Family family1 = new NonVegFamily();
+        family1.familyType();
+        family1.orderMeat();
+        Family family2 = new PureVegFamily(); 
+        family2.familyType();
         
     }
 }
 
 
-class Order{
-    String food;
+
+interface Family {
+    void familyType();
+    String getFamilyType();
 }
 
-interface Family{
 
-    public void familyType();
-    
+interface VegOrder{
+    void orderVeg();
 }
 
-class Family1 implements Family{
+interface NonVegOrder {
+    void orderNonVeg();
+}
+
+class NonVegFamily implements Family, NonVegOrder, VegOrder{
     @Override
-    public void familyType(){
-        System.out.println("Family1 is Non-veg");
+    public void familyType() {
+        System.out.println("This is a Non-Vegetarian Family.");
+    }
+
+    @Override
+    public String getFamilyType() {
+        return "Non-Vegetarian Family";
+    }
+
+    @Override
+    public void orderNonVeg() {
+        System.out.println("Ordering meat for Non-Vegetarian Family.");
+    }
+
+    @Override
+    public void orderVeg(){
+         System.out.println("Ordering veg");
     }
 }
 
-class Family2 implements Family{
+class PureVegFamily implements Family, VegOrder {
     @Override
-    public void familyType(){
-        System.out.println("Family2 is veg");
+    public void familyType() {
+        System.out.println("This is a Pure Vegetarian Family.");
+    }
+
+    @Override
+    public String getFamilyType() {
+        return "Pure Vegetarian Family.";
+    }
+
+    @Override
+    public void orderVeg(){
+         System.out.println("Ordering veg");
     }
 }
-
